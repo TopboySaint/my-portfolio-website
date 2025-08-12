@@ -4,10 +4,10 @@ import { BsTwitterX, BsWhatsapp } from "react-icons/bs"
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/Adebayozz1994", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/ogunlade-adebayo-2a1786294/", label: "LinkedIn" },
-    { icon: BsTwitterX, href: "https://x.com/adebayozz1", label: "Twitter" },
-    { icon: BsWhatsapp, href: "https://wa.me/+2348166223968", label: "Whatsapp" },
+    { icon: Github, href: "https://github.com/TopboySaint", label: "GitHub" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: BsTwitterX, href: "https://x.com/sgt_nash?s=21", label: "Twitter" },
+    { icon: BsWhatsapp, href: "https://wa.me/+2347063371898", label: "Whatsapp" },
   ]
 
   return (
@@ -21,8 +21,8 @@ export default function Footer() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <div className="mb-6 md:mb-0 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#FF8C00] mb-2">Adebayo</h3>
-            <p className="text-[#FF8C00] text-sm sm:text-base">Full Stack Developer</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#FF8C00] mb-2">Adeniyi 'SAINT Develops' Bukola</h3>
+            <p className="text-[#FF8C00] text-sm sm:text-base">Software Engineer, Full Stack Web Developer, Native App Developer.</p>
           </div>
 
           <Motion.div
@@ -62,7 +62,7 @@ export default function Footer() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <p className="text-[#FF8C00] text-sm sm:text-base">
-            © {new Date().getFullYear()} Adebayo. All rights reserved.
+            © {new Date().getFullYear()} SAINT Develops. All rights reserved.
           </p>
         </Motion.div>
       </div>
