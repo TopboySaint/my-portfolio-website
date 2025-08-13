@@ -21,6 +21,9 @@ import {
   SiReacthookform,
   SiMongoose,
   SiReact,
+  SiJest,
+  SiJira,
+  SiSlack,
   SiExpo,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
@@ -89,6 +92,9 @@ export default function About() {
       { name: "Render", icon: SiRender },
       { name: "ESLint", icon: SiEslint },
       { name: "Prettier", icon: SiPrettier },
+      { name: "Jest", icon: SiJest },
+      { name: "Jira", icon: SiJira },
+      { name: "Slack", icon: SiSlack },
     ],
   }
   const categories = [

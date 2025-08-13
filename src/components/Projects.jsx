@@ -75,8 +75,16 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 bg-[#00008B] text-[#FF8C00]">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="projects"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-cyan-100 font-[Poppins] overflow-hidden"
+    >
+      {/* Decorative shapes (consistent with other sections) */}
+      <div className="pointer-events-none absolute -top-32 -right-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-160px] left-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-radial from-cyan-500/10 via-transparent to-transparent rounded-full blur-2xl" />
+
+      <div className="relative max-w-7xl mx-auto">
         <Motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -84,11 +92,11 @@ export default function Projects() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="text-[#FF8C00]">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200 drop-shadow">Featured Projects</span>
           </h2>
-          <p className="text-[#FF8C00] max-w-2xl mx-auto text-sm sm:text-base">
-            A few projects I've built, ranging from responsive frontends to full-stack platforms. Each one helped me sharpen my craft.
+          <p className="text-cyan-200/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+            I selected a few from the projects i've built, spanning front-end interfaces, full-stack apps, and experimental builds to sharpen my architecture, performance, and DX.
           </p>
         </Motion.div>
 
@@ -97,33 +105,39 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
         >
           {projects.map((project, index) => (
             <Motion.div
               key={index}
-              className="bg-[#00008B] rounded-lg p-4 sm:p-6 hover:transform hover:scale-105 transition-all duration-300 border border-[#FF8C00]"
+              className="relative group rounded-2xl p-5 sm:p-6 bg-[#0f1c21]/60 backdrop-blur-md ring-1 ring-cyan-400/15 shadow-lg shadow-black/40 transition-all duration-300 hover:shadow-cyan-500/20 hover:ring-cyan-300/30 overflow-hidden"
               variants={itemVariants}
-              whileHover={{ y: -4, opacity: 0.95 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+              whileHover={{ y: -4, opacity: 0.97 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              {/* IMAGE SECTION */}
-              <div className="mb-4 overflow-hidden rounded-md">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 pointer-events-none" />
+              {/* IMAGE */}
+              <div className="mb-4 overflow-hidden rounded-lg ring-1 ring-cyan-400/10">
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
+                  loading="lazy"
                 />
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-[#FF8C00]">{project.title}</h3>
-              <p className="text-[#FF8C00] mb-4 text-sm leading-relaxed">{project.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 tracking-tight text-cyan-100">
+                {project.title}
+              </h3>
+              <p className="text-cyan-200/80 mb-5 text-sm leading-relaxed">
+                {project.description}
+              </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 sm:px-3 py-1 bg-[#00008B] text-[#FF8C00] text-xs rounded-full border border-[#FF8C00]"
+                    className="px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium tracking-wide bg-[#0d171b]/60 ring-1 ring-cyan-400/20 text-cyan-300/90 group-hover:ring-cyan-300/30 group-hover:text-cyan-200 transition-colors"
                   >
                     {tech}
                   </span>
@@ -134,22 +148,24 @@ export default function Projects() {
                 <Motion.a
                   href={project.codeUrl}
                   target="_blank"
-                  className="flex items-center justify-center gap-2 px-4 py-2 border border-[#FF8C00] text-[#FF8C00] rounded-lg hover:bg-[#FF8C00] hover:text-white transition-colors text-sm"
-                  whileHover={{ opacity: 0.9 }}
-                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center gap-2 px-4 py-2 rounded-lg ring-1 ring-cyan-400/25 bg-[#0d171b]/60 backdrop-blur-sm text-cyan-200 text-sm font-medium hover:text-cyan-100 hover:ring-cyan-300/40 hover:bg-gradient-to-r hover:from-cyan-400/10 hover:via-blue-400/10 hover:to-teal-300/10 transition-all"
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                 >
                   <Github size={16} />
-                  View Code
+                  Code
                 </Motion.a>
                 <Motion.a
                   href={project.liveUrl}
                   target="_blank"
-                  className="flex items-center justify-center gap-2 px-4 py-2 bg-[#FF8C00] text-white rounded-lg hover:bg-[#FF8C00]/90 transition-colors text-sm"
-                  whileHover={{ opacity: 0.9 }}
-                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-sm shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                 >
                   <ExternalLink size={16} />
-                  Live Demo
+                  Live
                 </Motion.a>
               </div>
             </Motion.div>
