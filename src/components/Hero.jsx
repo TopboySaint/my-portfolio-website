@@ -78,8 +78,8 @@ export default function Hero() {
                 View Projects
               </Motion.button>
               <Motion.a
-                href="/Ogunladeadebayopeter.pdf"
-                download="Ogunladeadebayopeter.pdf"
+                href="/Resume.pdf"
+                download="Resume.pdf"
                 className="inline-flex items-center justify-center px-6 md:px-8 py-3 rounded-lg font-semibold border border-cyan-400/40 text-cyan-200 hover:text-cyan-100 hover:bg-cyan-400/10 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-cyan-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
