@@ -54,12 +54,12 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-cyan-100 font-[Poppins] overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0f2027] text-cyan-100 font-[Poppins] overflow-hidden"
     >
       {/* Decorative shapes (consistent with other sections) */}
       <div className="pointer-events-none absolute -top-32 -right-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-160px] left-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-radial from-cyan-500/10 via-transparent to-transparent rounded-full blur-2xl" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-cyan-500/10 rounded-full blur-2xl" />
 
       <div className="relative max-w-7xl mx-auto">
         <Motion.div
@@ -70,7 +70,7 @@ export default function Projects() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200 drop-shadow">Featured Projects</span>
+            <span className="text-cyan-300 drop-shadow">Featured Projects</span>
           </h2>
           <p className="text-cyan-200/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
             I selected a few from the projects i've built, spanning front-end interfaces, full-stack apps, and experimental builds to sharpen my architecture, performance, and DX.
@@ -92,7 +92,7 @@ export default function Projects() {
               whileHover={{ y: -4, opacity: 0.97 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 pointer-events-none" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-cyan-400/10 pointer-events-none" />
 
               <div className="mb-4 overflow-hidden rounded-lg ring-1 ring-cyan-400/10">
                 <img
@@ -126,7 +126,7 @@ export default function Projects() {
                   href={project.codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative flex items-center justify-center gap-2 px-4 py-2 rounded-lg ring-1 ring-cyan-400/25 bg-[#0d171b]/60 backdrop-blur-sm text-cyan-200 text-sm font-medium hover:text-cyan-100 hover:ring-cyan-300/40 hover:bg-gradient-to-r hover:from-cyan-400/10 hover:via-blue-400/10 hover:to-teal-300/10 transition-all"
+                  className="relative flex items-center justify-center gap-2 px-4 py-2 rounded-lg ring-1 ring-cyan-400/25 bg-[#0d171b]/60 backdrop-blur-sm text-cyan-200 text-sm font-medium hover:text-cyan-100 hover:ring-cyan-300/40 hover:bg-cyan-400/10 transition-all"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
@@ -137,7 +137,7 @@ export default function Projects() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-sm shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
+                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 text-[#0b1214] font-semibold text-sm shadow-md shadow-cyan-900/30 hover:bg-cyan-400 transition-all ring-1 ring-cyan-400/40"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
@@ -153,7 +153,7 @@ export default function Projects() {
             href="https://github.com/TopboySaint?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-base shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
+            className="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-[#0b1214] font-semibold text-base shadow-md shadow-cyan-900/30 hover:bg-cyan-400 transition-all ring-1 ring-cyan-400/40"
           >
             View More
           </a>

@@ -5,14 +5,14 @@ const LoadingScreen = () => {
   const prefersReducedMotion = useReducedMotion()
   return (
     <Motion.div
-      className="fixed inset-0 flex flex-col items-center justify-center z-[9999] bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] backdrop-blur-md px-4 sm:px-6 py-6 gap-6 md:gap-10 min-h-svh"
+      className="fixed inset-0 flex flex-col items-center justify-center z-[9999] bg-[#0f2027] backdrop-blur-md px-4 sm:px-6 py-6 gap-6 md:gap-10 min-h-svh"
       style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)', border: '1px solid rgba(255,255,255,0.1)' }}
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <Motion.div
-        className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2 sm:mb-6 md:mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-300 drop-shadow-lg tracking-wide font-[Poppins] leading-tight max-w-[90vw]"
+        className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2 sm:mb-6 md:mb-8 text-center text-cyan-400 drop-shadow-lg tracking-wide font-[Poppins] leading-tight max-w-[90vw]"
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 100 }}

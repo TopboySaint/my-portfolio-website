@@ -81,7 +81,7 @@ export default function Navbar() {
   return (
     <>
       <Motion.nav
-        className="fixed top-0 left-0 right-0 w-full z-50 bg-gradient-to-br from-[#0f2027]/90 via-[#2c5364]/90 to-[#232526]/90 backdrop-blur-md backdrop-saturate-150 border-b border-white/10 shadow-lg ring-1 ring-white/5 supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]"
+        className="fixed top-0 left-0 right-0 w-full z-50 bg-[#0f2027]/90 backdrop-blur-md backdrop-saturate-150 border-b border-white/10 shadow-lg ring-1 ring-white/5 supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
@@ -94,8 +94,8 @@ export default function Navbar() {
               whileHover={{ opacity: 0.9, scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <span className="block text-2xl xs:text-[26px] sm:hidden font-extrabold bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-300 bg-clip-text text-transparent drop-shadow-lg tracking-wide font-[Poppins] leading-tight">SAINT Devs</span>
-              <span className="hidden sm:block text-2xl sm:text-[26px] md:text-[30px] lg:text-[32px] font-extrabold bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-300 bg-clip-text text-transparent drop-shadow-lg tracking-wide font-[Poppins] leading-tight truncate max-w-[68vw]">SAINT Develops</span>
+              <span className="block text-2xl xs:text-[26px] sm:hidden font-extrabold text-cyan-400 bg-clip-text text-transparent drop-shadow-lg tracking-wide font-[Poppins] leading-tight">SAINT Devs</span>
+              <span className="hidden sm:block text-2xl sm:text-[26px] md:text-[30px] lg:text-[32px] font-extrabold text-cyan-400 bg-clip-text text-transparent drop-shadow-lg tracking-wide font-[Poppins] leading-tight truncate max-w-[68vw]">SAINT Develops</span>
             </Motion.div>
 
   <div className="hidden md:flex flex-wrap space-x-2 lg:space-x-4 xl:space-x-6">
@@ -135,7 +135,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <Motion.div
-            className="fixed inset-0 z-40 md:hidden bg-gradient-to-br from-[#0f2027]/95 via-[#2c5364]/95 to-[#232526]/95 backdrop-blur-xl border-l border-white/10 shadow-2xl px-2 pt-2 pb-8 flex flex-col overflow-hidden"
+            className="fixed inset-0 z-40 md:hidden bg-[#0f2027]/95 backdrop-blur-xl border-l border-white/10 shadow-2xl px-2 pt-2 pb-8 flex flex-col overflow-hidden"
             style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.27)' }}
             variants={menuVariants}
             initial="closed"
@@ -168,7 +168,7 @@ export default function Navbar() {
                 <Motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="w-full max-w-xs text-2xl xs:text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-300 bg-clip-text text-transparent drop-shadow-lg px-4 py-3 rounded-xl hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all font-[Poppins] text-center select-none"
+                  className="w-full max-w-xs text-2xl xs:text-3xl sm:text-4xl font-semibold text-cyan-400 bg-clip-text text-transparent drop-shadow-lg px-4 py-3 rounded-xl hover:bg-cyan-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all font-[Poppins] text-center select-none"
                   variants={linkVariants}
                   whileHover={{ scale: 1.07, opacity: 0.95 }}
                   whileTap={{ scale: 0.97 }}
@@ -180,7 +180,7 @@ export default function Navbar() {
 
             </Motion.div>
 
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 -z-10 rounded-xl" />
+            <div className="absolute inset-0 bg-cyan-400/10 -z-10 rounded-xl" />
 
             <Motion.div
               className="absolute top-20 left-8 w-3 h-3 bg-cyan-300 rounded-full opacity-60 shadow-lg"

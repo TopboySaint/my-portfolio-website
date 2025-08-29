@@ -101,12 +101,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-cyan-100 font-[Poppins] overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0f2027] text-cyan-100 font-[Poppins] overflow-hidden"
     >
       {/* Decorative shapes */}
       <div className="pointer-events-none absolute -top-32 -left-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-140px] right-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] bg-gradient-radial from-cyan-500/10 via-transparent to-transparent rounded-full blur-2xl" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] bg-cyan-500/10 rounded-full blur-2xl" />
 
       <div className="relative max-w-5xl mx-auto">
         <Motion.div
@@ -117,7 +117,7 @@ export default function About() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200 drop-shadow">Meet SAINT Develops</span>
+            <span className="text-cyan-300 drop-shadow">Meet SAINT Develops</span>
           </h2>
         </Motion.div>
 
@@ -150,7 +150,7 @@ export default function About() {
                 viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-2">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200">{cat.label}</span>
+                  <span className="text-cyan-300">{cat.label}</span>
                 </h3>
               </Motion.div>
               <Motion.div
@@ -170,7 +170,7 @@ export default function About() {
                       whileHover={{ y: -3, opacity: 0.9 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
                     >
-                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-2 bg-[#0f1c21]/70 ring-1 ring-cyan-400/20 backdrop-blur-sm group-hover:bg-gradient-to-r group-hover:from-cyan-400/20 group-hover:via-blue-400/20 group-hover:to-teal-300/20 group-hover:shadow-md group-hover:shadow-cyan-500/20 transition-all duration-300">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-2 bg-[#0f1c21]/70 ring-1 ring-cyan-400/20 backdrop-blur-sm group-hover:bg-cyan-400/20 group-hover:shadow-md group-hover:shadow-cyan-500/20 transition-all duration-300">
                         <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-300 group-hover:text-cyan-100 transition-colors" />
                       </div>
                       <span className="text-xs sm:text-sm text-cyan-300 text-center group-hover:text-cyan-200 transition-colors">

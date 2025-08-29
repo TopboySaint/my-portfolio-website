@@ -11,11 +11,11 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] py-16 px-4 sm:px-6 lg:px-8 text-cyan-100 font-[Poppins]">
+    <footer className="relative overflow-hidden bg-[#0f2027] py-16 px-4 sm:px-6 lg:px-8 text-cyan-100 font-[Poppins]">
 
       <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[540px] h-[540px] bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-200px] right-[-160px] w-[520px] h-[520px] bg-teal-400/10 rounded-full blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 left-0 w-[420px] h-[420px] -translate-y-1/2 bg-gradient-radial from-cyan-500/10 via-transparent to-transparent rounded-full blur-2xl" />
+      <div className="pointer-events-none absolute top-1/2 left-0 w-[420px] h-[420px] -translate-y-1/2 bg-cyan-500/10 rounded-full blur-2xl" />
 
       <div className="relative max-w-7xl mx-auto">
         <Motion.div
@@ -27,7 +27,7 @@ export default function Footer() {
         >
           <div className="mb-2 md:mb-0 text-center md:text-left max-w-lg">
             <h3 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200 drop-shadow">Adeniyi 'SAINT Develops' Bukola</span>
+              <span className="text-cyan-300 drop-shadow">Adeniyi 'SAINT Develops' Bukola</span>
             </h3>
             <p className="text-cyan-200/80 text-sm sm:text-base leading-relaxed">
               Software Engineer focused on full stack web & native app development. 
@@ -48,7 +48,7 @@ export default function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-11 h-11 rounded-xl flex items-center justify-center bg-[#0f1c21]/70 ring-1 ring-cyan-400/20 backdrop-blur-sm hover:bg-gradient-to-r hover:from-cyan-400/20 hover:via-blue-400/20 hover:to-teal-300/20 hover:shadow-md hover:shadow-cyan-500/20 transition-all duration-300"
+                  className="w-11 h-11 rounded-xl flex items-center justify-center bg-[#0f1c21]/70 ring-1 ring-cyan-400/20 backdrop-blur-sm hover:bg-cyan-400/20 hover:shadow-md hover:shadow-cyan-500/20 transition-all duration-300"
                   whileHover={{ y: -2, opacity: 0.9 }}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
