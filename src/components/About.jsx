@@ -93,7 +93,7 @@ export default function About() {
   const categories = [
     { label: "Frontend", items: techStack.frontend },
     { label: "Backend & Databases", items: techStack.backend },
-    { label: "Tools & Workflow", items: techStack.tools },
+    { label: "Other tools & Workflow", items: techStack.tools },
   ];
 
   return (
@@ -142,11 +142,11 @@ export default function About() {
             <strong className="text-cyan-100">React Native</strong>,{" "}
             <strong className="text-cyan-100">Next.js</strong>, and TypeScript,
             backed by <strong className="text-cyan-100">Node.js</strong>/
-            <strong className="text-cyan-100">Express</strong> APIs. I choose
+            <strong className="text-cyan-100">Express, </strong>
+            <strong className="text-cyan-100">PHP</strong> APIs. I choose
             the right persistence model across{" "}
             <strong className="text-cyan-100">MongoDB (Mongoose)</strong>,{" "}
             <strong className="text-cyan-100">MySQL</strong>,{" "}
-            <strong className="text-cyan-100">PostgreSQL</strong>,{" "}
             <strong className="text-cyan-100">Firebase</strong>, and{" "}
             <strong className="text-cyan-100">GraphQL</strong> based on access
             patterns and scalability. The goal is creating clean boundaries,

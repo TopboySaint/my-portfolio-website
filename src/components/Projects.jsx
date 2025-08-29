@@ -16,7 +16,7 @@ export default function Projects() {
     {
       title: "Weather Checker",
       description:
-        "This is a simple, responsive weather-checking platform with HTML, Vanilla Javascript and Bootstrap.",
+        "This is a simple, responsive weather-checking platform, built with HTML, Vanilla Javascript and Bootstrap.",
       tech: ["HTML", "CSS", "BootstrapCSS", "Javascript"],
       codeUrl: "https://github.com/TopboySaint/Weather-App",
       liveUrl: "https://topboysaint.github.io/Weather-App/",
@@ -73,9 +73,9 @@ export default function Projects() {
             <span className="text-cyan-300 drop-shadow">Featured Projects</span>
           </h2>
           <p className="text-cyan-200/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            I selected a few from the projects i've built, spanning front-end
+            I selected a few from the projects I've built, spanning front-end
             interfaces, full-stack apps, and experimental builds to sharpen my
-            architecture, and performance.
+            architecture and performance.
           </p>
         </Motion.div>
 

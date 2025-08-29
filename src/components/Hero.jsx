@@ -62,16 +62,13 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              I build with a modern MERN + Next.js + TypeScript stack and craft
-              interfaces with Vanilla CSS, TailwindCSS & Bootstrap. For state
+              I build with a modern MERN + Next.js + React Native + TypeScript stack and craft vibrant
+              interface styles with Vanilla CSS, TailwindCSS & Bootstrap. For state
               and data flow I use Redux Toolkit plus React Hook Form / Formik
-              with Yup for robust form handling. My auth & security toolkit
-              includes JWT, bcrypt, and hardened API practices; persistence is
-              powered by MongoDB (Mongoose) alongside Firebase services when I
-              need realtime, auth, or storage. I deploy to Vercel, Netlify, and
-              Render, rely on ESLint + Prettier, Vite / Webpack, Postman for API
-              debugging, and GitHub-driven workflows to keep code clean and
-              shipping fast. I focus on clear architecture, performance,
+              with Yup for robust form handling. My authentication & security toolkit
+              includes JWT, bcrypt, and hardened API practices; Backend is
+              efficiently powered by PHP + MySQL, Node.js + MongoDB (Mongoose) alongside Firebase services when I
+              need realtime database, authentication, or even storage. I focus on clear architecture, performance,
               accessibility, and turning complex requirements into maintainable
               products that scale.
             </Motion.p>
