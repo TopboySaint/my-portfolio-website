@@ -1,12 +1,15 @@
-import { motion as Motion, useReducedMotion } from "framer-motion"
-import { Loader2 } from "lucide-react"
+import { motion as Motion, useReducedMotion } from "framer-motion";
+import { Loader2 } from "lucide-react";
 
 const LoadingScreen = () => {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
   return (
     <Motion.div
       className="fixed inset-0 flex flex-col items-center justify-center z-[9999] bg-[#0f2027] backdrop-blur-md px-4 sm:px-6 py-6 gap-6 md:gap-10 min-h-svh"
-      style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)', border: '1px solid rgba(255,255,255,0.1)' }}
+      style={{
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        border: "1px solid rgba(255,255,255,0.1)",
+      }}
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -18,23 +21,31 @@ const LoadingScreen = () => {
         exit={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {"SAINT Develops".split('').map((char, index) => {
+        {"SAINT Develops".split("").map((char, index) => {
           const baseTransition = {
             duration: 0.6,
             delay: index * 0.06,
-            ease: "easeInOut"
-          }
+            ease: "easeInOut",
+          };
           return (
             <Motion.span
               key={index}
               className="inline-block mx-[2px] sm:mx-1"
               initial={{ opacity: 0, y: -40 }}
-              animate={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: [0, -12, 0] }}
-              transition={prefersReducedMotion ? baseTransition : { ...baseTransition, repeat: Infinity, repeatDelay: 1.4 }}
+              animate={
+                prefersReducedMotion
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 1, y: [0, -12, 0] }
+              }
+              transition={
+                prefersReducedMotion
+                  ? baseTransition
+                  : { ...baseTransition, repeat: Infinity, repeatDelay: 1.4 }
+              }
             >
               {char}
             </Motion.span>
-          )
+          );
         })}
       </Motion.div>
       <Motion.div
@@ -45,10 +56,12 @@ const LoadingScreen = () => {
         aria-live="polite"
       >
         <Loader2 className="h-5 w-5 xs:h-6 xs:w-6 sm:h-7 sm:w-7 animate-spin text-cyan-300 drop-shadow-md" />
-        <span className="text-sm xs:text-base sm:text-lg font-medium tracking-wide font-[Poppins]">Loading Portfolio...</span>
+        <span className="text-sm xs:text-base sm:text-lg font-medium tracking-wide font-[Poppins]">
+          Loading Portfolio...
+        </span>
       </Motion.div>
     </Motion.div>
-  )
-}
+  );
+};
 
-export default LoadingScreen
+export default LoadingScreen;

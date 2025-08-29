@@ -1,28 +1,26 @@
-import { motion as Motion } from "framer-motion"
-import pfp from "@/assets/RZADE8558.jpg"
-import { Typewriter } from "react-simple-typewriter"
+import { motion as Motion } from "framer-motion";
+import pfp from "@/assets/RZADE8558.jpg";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   const scrollToProjects = () => {
-    const element = document.getElementById("projects")
+    const element = document.getElementById("projects");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center pt-28 md:pt-32 overflow-hidden bg-[#0f2027] text-cyan-100 font-[Poppins]"
     >
-
       <div className="pointer-events-none absolute -top-32 -left-20 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-120px] right-[-120px] w-96 h-96 bg-teal-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-500/10 rounded-full blur-2xl" />
 
       <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-
           <Motion.div
             className="order-2 lg:order-1 text-center lg:text-left"
             initial={{ opacity: 0, y: 30 }}
@@ -35,9 +33,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
             >
-              <span className="block mb-2 text-sm md:text-base font-medium tracking-widest text-cyan-300/80 uppercase">Welcome !</span>
+              <span className="block mb-2 text-sm md:text-base font-medium tracking-widest text-cyan-300/80 uppercase">
+                Welcome !
+              </span>
               Hi, I'm <span className="text-cyan-400">Adeniyi Bukola</span>
-
               <div className="mt-3 md:mt-4 text-cyan-200/80 text-sm sm:text-base md:text-lg h-6 sm:h-7 md:h-8 flex items-center justify-center lg:justify-start">
                 <Typewriter
                   words={[
@@ -63,7 +62,18 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              I build with a modern MERN + Next.js + TypeScript stack and craft interfaces with Vanilla CSS, TailwindCSS & Bootstrap. For state and data flow I use Redux Toolkit plus React Hook Form / Formik with Yup for robust form handling. My auth & security toolkit includes JWT, bcrypt, and hardened API practices; persistence is powered by MongoDB (Mongoose) alongside Firebase services when I need realtime, auth, or storage. I deploy to Vercel, Netlify, and Render, rely on ESLint + Prettier, Vite / Webpack, Postman for API debugging, and GitHub-driven workflows to keep code clean and shipping fast. I focus on clear architecture, performance, accessibility, and turning complex requirements into maintainable products that scale.
+              I build with a modern MERN + Next.js + TypeScript stack and craft
+              interfaces with Vanilla CSS, TailwindCSS & Bootstrap. For state
+              and data flow I use Redux Toolkit plus React Hook Form / Formik
+              with Yup for robust form handling. My auth & security toolkit
+              includes JWT, bcrypt, and hardened API practices; persistence is
+              powered by MongoDB (Mongoose) alongside Firebase services when I
+              need realtime, auth, or storage. I deploy to Vercel, Netlify, and
+              Render, rely on ESLint + Prettier, Vite / Webpack, Postman for API
+              debugging, and GitHub-driven workflows to keep code clean and
+              shipping fast. I focus on clear architecture, performance,
+              accessibility, and turning complex requirements into maintainable
+              products that scale.
             </Motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start mb-12">
@@ -91,7 +101,6 @@ export default function Hero() {
             </div>
           </Motion.div>
 
-
           <Motion.div
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -113,21 +122,29 @@ export default function Hero() {
                 </div>
               </div>
 
-
               <Motion.span
                 className="absolute -top-4 -right-4 w-6 h-6 sm:w-8 sm:h-8 border border-cyan-300/60 rounded-md rotate-12"
                 animate={{ rotate: [12, 24, 12], scale: [1, 1.1, 1] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
               <Motion.span
                 className="absolute -bottom-5 -left-5 w-4 h-4 sm:w-6 sm:h-6 border border-teal-300/60 rounded-md -rotate-12"
                 animate={{ rotate: [-12, -24, -12], scale: [1, 1.15, 1] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
               />
             </div>
           </Motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,6 @@
-"use client"
-// Removed portrait image per request
-import { motion as Motion } from "framer-motion"
+"use client";
+import { motion as Motion } from "framer-motion";
 
-// Icons
 import {
   SiExpress,
   SiRedux,
@@ -24,7 +22,13 @@ import {
 import { IoLogoFirebase } from "react-icons/io5";
 import { BiLogoMongodb } from "react-icons/bi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { FaBootstrap, FaNpm, FaReact, FaLock, FaCheckCircle } from "react-icons/fa";
+import {
+  FaBootstrap,
+  FaNpm,
+  FaReact,
+  FaLock,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { FaGitAlt, FaGithub, FaPhp } from "react-icons/fa6";
 import { DiNodejs, DiVisualstudio } from "react-icons/di";
@@ -36,7 +40,7 @@ export default function About() {
       opacity: 1,
       transition: { staggerChildren: 0.05, ease: "easeOut" },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 15 },
@@ -45,7 +49,7 @@ export default function About() {
       y: 0,
       transition: { duration: 0.4, ease: "easeOut" },
     },
-  }
+  };
 
   const techStack = {
     frontend: [
@@ -58,7 +62,7 @@ export default function About() {
       { name: "Redux Toolkit", icon: SiRedux },
       { name: "React Hook Form", icon: SiReacthookform },
       { name: "Formik", icon: SiFormik },
-	  { name: "Yup", icon: FaCheckCircle },
+      { name: "Yup", icon: FaCheckCircle },
     ],
     backend: [
       { name: "Node.js", icon: DiNodejs },
@@ -67,8 +71,6 @@ export default function About() {
       { name: "MongoDB", icon: BiLogoMongodb },
       { name: "Mongoose", icon: SiMongoose },
       { name: "MySQL", icon: GrMysql },
-  // { name: "PostgreSQL", icon: SiPostgresql },
-  // { name: "GraphQL", icon: GrGraphQl },
       { name: "Firebase", icon: IoLogoFirebase },
       { name: "JWT", icon: SiJsonwebtokens },
       { name: "bcrypt", icon: FaLock },
@@ -81,29 +83,24 @@ export default function About() {
       { name: "NPM", icon: FaNpm },
       { name: "Webpack", icon: SiWebpack },
       { name: "Postman", icon: SiPostman },
-  // { name: "Docker", icon: SiDocker },
       { name: "Vercel", icon: SiVercel },
       { name: "Netlify", icon: SiNetlify },
       { name: "Render", icon: SiRender },
       { name: "ESLint", icon: SiEslint },
       { name: "Prettier", icon: SiPrettier },
-  // { name: "Jest", icon: SiJest },
-  // { name: "Jira", icon: SiJira },
-  // { name: "Slack", icon: SiSlack },
     ],
-  }
+  };
   const categories = [
     { label: "Frontend", items: techStack.frontend },
     { label: "Backend & Databases", items: techStack.backend },
     { label: "Tools & Workflow", items: techStack.tools },
-  ]
+  ];
 
   return (
     <section
       id="about"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0f2027] text-cyan-100 font-[Poppins] overflow-hidden"
     >
-      {/* Decorative shapes */}
       <div className="pointer-events-none absolute -top-32 -left-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-140px] right-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] bg-cyan-500/10 rounded-full blur-2xl" />
@@ -117,7 +114,9 @@ export default function About() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
-            <span className="text-cyan-300 drop-shadow">Meet SAINT Develops</span>
+            <span className="text-cyan-300 drop-shadow">
+              Meet SAINT Develops
+            </span>
           </h2>
         </Motion.div>
 
@@ -129,13 +128,50 @@ export default function About() {
           viewport={{ once: true, margin: "-50px" }}
         >
           <p className="text-cyan-200/85 text-base sm:text-lg leading-relaxed mb-4">
-            Hello! I'm <span className="text-cyan-100 font-semibold">Adeniyi Bukola</span>, a Software Engineer specializing in full stack web and native application development. I’m from Oyo state, Nigeria. I hold a National Diploma certificate in Computer Science, a Professional Diploma certificate in Software Engineering from SQI College of ICT, where I completed my industrial training and internship.
+            Hello! I'm{" "}
+            <span className="text-cyan-100 font-semibold">Adeniyi Bukola</span>,
+            a Software Engineer specializing in full stack web and native
+            application development. I’m from Oyo state, Nigeria. I hold a
+            National Diploma certificate in Computer Science, a Professional
+            Diploma certificate in Software Engineering from SQI College of ICT,
+            where I completed my industrial training and internship.
           </p>
           <p className="text-cyan-200/80 text-base sm:text-lg leading-relaxed mb-4">
-            I build full stack web & native products with <strong className="text-cyan-100">React</strong>, <strong className="text-cyan-100">React Native</strong>, <strong className="text-cyan-100">Next.js</strong>, and TypeScript, backed by <strong className="text-cyan-100">Node.js</strong>/<strong className="text-cyan-100">Express</strong> APIs. I choose the right persistence model across <strong className="text-cyan-100">MongoDB (Mongoose)</strong>, <strong className="text-cyan-100">MySQL</strong>, <strong className="text-cyan-100">PostgreSQL</strong>, <strong className="text-cyan-100">Firebase</strong>, and <strong className="text-cyan-100">GraphQL</strong> based on access patterns and scalability. The goal is creating clean boundaries, predictable state, secure data flow, and responsive UI/UX.
+            I build full stack web & native products with{" "}
+            <strong className="text-cyan-100">React</strong>,{" "}
+            <strong className="text-cyan-100">React Native</strong>,{" "}
+            <strong className="text-cyan-100">Next.js</strong>, and TypeScript,
+            backed by <strong className="text-cyan-100">Node.js</strong>/
+            <strong className="text-cyan-100">Express</strong> APIs. I choose
+            the right persistence model across{" "}
+            <strong className="text-cyan-100">MongoDB (Mongoose)</strong>,{" "}
+            <strong className="text-cyan-100">MySQL</strong>,{" "}
+            <strong className="text-cyan-100">PostgreSQL</strong>,{" "}
+            <strong className="text-cyan-100">Firebase</strong>, and{" "}
+            <strong className="text-cyan-100">GraphQL</strong> based on access
+            patterns and scalability. The goal is creating clean boundaries,
+            predictable state, secure data flow, and responsive UI/UX.
           </p>
           <p className="text-cyan-200/70 text-base sm:text-lg leading-relaxed">
-            Tooling and quality workflow includes <strong className="text-cyan-100">Redux Toolkit</strong>, <strong className="text-cyan-100">React Hook Form</strong>, <strong className="text-cyan-100">Formik</strong> + <strong className="text-cyan-100">Yup</strong>, auth with <strong className="text-cyan-100">JWT</strong> & <strong className="text-cyan-100">bcrypt</strong>, UI systems using <strong className="text-cyan-100">Tailwind</strong> & <strong className="text-cyan-100">Bootstrap</strong>, fast builds via <strong className="text-cyan-100">Vite</strong> / <strong className="text-cyan-100">Webpack</strong> / <strong className="text-cyan-100">Expo</strong>, consistency enforced by <strong className="text-cyan-100">ESLint</strong> & <strong className="text-cyan-100">Prettier</strong>, API inspection in <strong className="text-cyan-100">Postman</strong>, and deployments to <strong className="text-cyan-100">Vercel</strong>, <strong className="text-cyan-100">Netlify</strong>, <strong className="text-cyan-100">Render</strong> and others. I focus on performance, accessibility, and maintainable architecture.
+            Tooling and quality workflow includes{" "}
+            <strong className="text-cyan-100">Redux Toolkit</strong>,{" "}
+            <strong className="text-cyan-100">React Hook Form</strong>,{" "}
+            <strong className="text-cyan-100">Formik</strong> +{" "}
+            <strong className="text-cyan-100">Yup</strong>, auth with{" "}
+            <strong className="text-cyan-100">JWT</strong> &{" "}
+            <strong className="text-cyan-100">bcrypt</strong>, UI systems using{" "}
+            <strong className="text-cyan-100">Tailwind</strong> &{" "}
+            <strong className="text-cyan-100">Bootstrap</strong>, fast builds
+            via <strong className="text-cyan-100">Vite</strong> /{" "}
+            <strong className="text-cyan-100">Webpack</strong> /{" "}
+            <strong className="text-cyan-100">Expo</strong>, consistency
+            enforced by <strong className="text-cyan-100">ESLint</strong> &{" "}
+            <strong className="text-cyan-100">Prettier</strong>, API inspection
+            in <strong className="text-cyan-100">Postman</strong>, and
+            deployments to <strong className="text-cyan-100">Vercel</strong>,{" "}
+            <strong className="text-cyan-100">Netlify</strong>,{" "}
+            <strong className="text-cyan-100">Render</strong> and others. I
+            focus on performance, accessibility, and maintainable architecture.
           </p>
         </Motion.div>
 
@@ -161,7 +197,7 @@ export default function About() {
                 viewport={{ once: true, margin: "-50px" }}
               >
                 {cat.items.map((tech) => {
-                  const IconComponent = tech.icon
+                  const IconComponent = tech.icon;
                   return (
                     <Motion.div
                       key={tech.name}
@@ -180,7 +216,7 @@ export default function About() {
                         {tech.name}
                       </div>
                     </Motion.div>
-                  )
+                  );
                 })}
               </Motion.div>
             </div>
@@ -188,5 +224,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

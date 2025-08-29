@@ -1,20 +1,22 @@
-"use client"
-import { ExternalLink, Github } from "lucide-react"
-import { motion as Motion } from "framer-motion"
+"use client";
+import { ExternalLink, Github } from "lucide-react";
+import { motion as Motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
     {
       title: "TaskMint",
-      description: "A Task Management app I built using React + TailwindCSS, Express.js + Node.js, and MongoDB.",
-      tech: ["React", "Nodejs", "MongoDB", "Tailwind CSS", 'Expressjs'],
+      description:
+        "A Task Management app I built using React + TailwindCSS, Express.js + Node.js, and MongoDB.",
+      tech: ["React", "Nodejs", "MongoDB", "Tailwind CSS", "Expressjs"],
       codeUrl: "https://github.com/TopboySaint/Task-Manager",
       liveUrl: "https://task-manager-ten-red.vercel.app/",
       image: "/images/projects/TaskMint.png",
     },
     {
       title: "Weather Checker",
-      description: "This is a simple, responsive weather-checking platform with HTML, Vanilla Javascript and Bootstrap.",
+      description:
+        "This is a simple, responsive weather-checking platform with HTML, Vanilla Javascript and Bootstrap.",
       tech: ["HTML", "CSS", "BootstrapCSS", "Javascript"],
       codeUrl: "https://github.com/TopboySaint/Weather-App",
       liveUrl: "https://topboysaint.github.io/Weather-App/",
@@ -23,13 +25,12 @@ export default function Projects() {
     {
       title: "WebVault",
       description: "A Web banking tool for managing finances with a modern UI.",
-      tech: ["React", "TaiwindCSS", "Nodejs", "MongoDB", "Expressjs" ],
+      tech: ["React", "TaiwindCSS", "Nodejs", "MongoDB", "Expressjs"],
       codeUrl: "https://github.com/TopboySaint/WebVault",
       liveUrl: "https://web-vault-alpha.vercel.app/",
       image: "/images/projects/WebVault.png",
     },
-    
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +41,7 @@ export default function Projects() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -49,14 +50,13 @@ export default function Projects() {
       y: 0,
       transition: { duration: 0.4, ease: "easeOut" },
     },
-  }
+  };
 
   return (
     <section
       id="projects"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0f2027] text-cyan-100 font-[Poppins] overflow-hidden"
     >
-      {/* Decorative shapes (consistent with other sections) */}
       <div className="pointer-events-none absolute -top-32 -right-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-160px] left-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-cyan-500/10 rounded-full blur-2xl" />
@@ -73,7 +73,9 @@ export default function Projects() {
             <span className="text-cyan-300 drop-shadow">Featured Projects</span>
           </h2>
           <p className="text-cyan-200/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            I selected a few from the projects i've built, spanning front-end interfaces, full-stack apps, and experimental builds to sharpen my architecture, performance, and DX.
+            I selected a few from the projects i've built, spanning front-end
+            interfaces, full-stack apps, and experimental builds to sharpen my
+            architecture, and performance.
           </p>
         </Motion.div>
 
@@ -160,5 +162,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

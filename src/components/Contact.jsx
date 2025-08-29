@@ -39,7 +39,7 @@ export default function Contact() {
     e.preventDefault()
     if (!validate()) return
     setIsSending(true)
-   emailjs.sendForm(
+    emailjs.sendForm(
   import.meta.env.VITE_YOUR_SERVICE_ID,
   import.meta.env.VITE_YOUR_TEMPLATE_ID,
   formRef.current,
@@ -52,7 +52,7 @@ export default function Contact() {
           console.log("SUCCESS!", result)
           toast.success("Message sent successfully!")
           setShowSuccessMessage(true)
-          setTimeout(() => setShowSuccessMessage(false), 5000) // Hide after 5 secs
+          setTimeout(() => setShowSuccessMessage(false), 5000) 
           setFormData({ name: "", email: "", subject: "", message: "" })
           formRef.current.reset()
         },
@@ -75,7 +75,7 @@ export default function Contact() {
       id="contact"
       className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#0f2027] text-cyan-100 font-[Poppins] overflow-hidden"
     >
-      {/* Decorative shapes */}
+
       <div className="pointer-events-none absolute -top-32 -right-24 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-160px] left-[-140px] w-[420px] h-[420px] bg-teal-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] bg-cyan-500/10 rounded-full blur-2xl" />
@@ -96,9 +96,8 @@ export default function Contact() {
           </p>
         </Motion.div>
 
-        {/* Main content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          {/* Contact Info Section */}
+
           <Motion.div
             className="order-2 lg:order-1"
             initial={{ opacity: 0, y: 20 }}
@@ -140,7 +139,6 @@ export default function Contact() {
             </div>
           </Motion.div>
 
-          {/* Contact Form Section */}
           <Motion.div
             className="order-1 lg:order-2"
             initial={{ opacity: 0, y: 20 }}
