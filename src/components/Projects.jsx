@@ -5,52 +5,20 @@ import { motion as Motion } from "framer-motion"
 export default function Projects() {
   const projects = [
     {
-      title: "FaceAPI",
-      description: "A face verification app using React, Node.js, and MongoDB.",
-      tech: ["React", "Nodejs", "MongoDB", "Tailwind CSS"],
-      codeUrl: "https://github.com/Adebayozz1994/face-verification-app",
-      liveUrl: "https://face-verification-app-neon.vercel.app/",
-      image: "/images/projects/FaceApi.PNG",
+      title: "TaskMint",
+      description: "A Task Management app I built using React + TailwindCSS, Express.js + Node.js, and MongoDB.",
+      tech: ["React", "Nodejs", "MongoDB", "Tailwind CSS", 'Expressjs'],
+      codeUrl: "https://github.com/TopboySaint/Task-Manager",
+      liveUrl: "https://task-manager-ten-red.vercel.app/",
+      image: "/images/projects/TaskMint.png",
     },
     {
-      title: "Annotation App",
-      description: "A tool for annotating data with a modern UI.",
-      tech: ["React", "Vite", "Taiwind"],
-      codeUrl: "https://github.com/Adebayozz1994/Annotation",
-      liveUrl: "https://annotation-pi.vercel.app/",
-      image: "/images/projects/Annotation.PNG",
-    },
-    {
-      title: "E-commerse",
-      description: "A responsive e-commerce platform with Next.js and Tailwind CSS.",
-      tech: ["Nextjs", "vite", "Tailwind CSS"],
-      codeUrl: "https://github.com/Adebayozz1994/E-commerce-Hub",
-      liveUrl: "https://e-commerce-hub-eight.vercel.app/",
-      image: "/images/projects/E-commerce.PNG",
-    },
-    {
-      title: "FoodDelivery APP",
-      description: "A food delivery app with a sleek design and MongoDB backend.",
-      tech: ["Nextjs", "Tailwind CSS", "MongoDB", "Node.js", "TypeScript"],
-      codeUrl: "https://github.com/Adebayozz1994/food_nextjs",
-      liveUrl: "https://food-nextjs-pearl.vercel.app/food/products",
-      image: "/images/projects/Food.PNG",
-    },
-    {
-      title: "Blog Site",
-      description: "A blog platform with Vue.js and PHP for dynamic content.",
-      tech: ["PHP", "Framer Motion", "Tailwind CSS","Veujs"],
-      codeUrl: "https://github.com/Adebayozz1994/Blog-Site-Frontend",
-      liveUrl: "https://blog-site-psi-two.vercel.app/",
-      image: "/images/projects/Blog.PNG",
-    },
-    {
-      title: "Van Life",
-      description: "A van rental platform with authentication and payment integration.",
-      tech: ["React", "Node.js", "Express", "MongoDB"],
-      codeUrl: "https://github.com/Adebayozz1994/Vanlife-Frontend",
-      liveUrl: "https://vanlife-frontend.vercel.app/",
-      image: "/images/projects/Vanlife.PNG",
+      title: "WebVault",
+      description: "A Web banking tool for managing finances with a modern UI.",
+      tech: ["React", "TaiwindCSS", "Nodejs", "MongoDB", "Expressjs" ],
+      codeUrl: "https://github.com/TopboySaint/WebVault",
+      liveUrl: "https://web-vault-alpha.vercel.app/",
+      image: "/images/projects/WebVault.png",
     },
   ]
 
@@ -101,7 +69,7 @@ export default function Projects() {
         </Motion.div>
 
         <Motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -110,67 +78,78 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Motion.div
               key={index}
-              className="relative group rounded-2xl p-5 sm:p-6 bg-[#0f1c21]/60 backdrop-blur-md ring-1 ring-cyan-400/15 shadow-lg shadow-black/40 transition-all duration-300 hover:shadow-cyan-500/20 hover:ring-cyan-300/30 overflow-hidden"
+              className="relative group rounded-3xl p-0 bg-gradient-to-br from-[#0f2027]/80 via-[#2c5364]/80 to-[#232526]/80 ring-1 ring-cyan-400/20 shadow-xl shadow-black/40 transition-all duration-300 hover:shadow-cyan-500/30 hover:ring-cyan-300/40 overflow-hidden flex flex-col md:flex-row md:items-stretch"
               variants={itemVariants}
-              whileHover={{ y: -4, opacity: 0.97 }}
+              whileHover={{ y: -6, scale: 1.02, opacity: 1 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 pointer-events-none" />
               {/* IMAGE */}
-              <div className="mb-4 overflow-hidden rounded-lg ring-1 ring-cyan-400/10">
+              <div className="md:w-2/5 flex-shrink-0 overflow-hidden rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none bg-[#0d171b]/80 ring-1 ring-cyan-400/10 flex items-center justify-center">
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
-                  className="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="w-full h-48 md:h-60 object-cover transform transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
               </div>
-
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 tracking-tight text-cyan-100">
-                {project.title}
-              </h3>
-              <p className="text-cyan-200/80 mb-5 text-sm leading-relaxed">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium tracking-wide bg-[#0d171b]/60 ring-1 ring-cyan-400/20 text-cyan-300/90 group-hover:ring-cyan-300/30 group-hover:text-cyan-200 transition-colors"
+              {/* CONTENT */}
+              <div className="flex-1 flex flex-col justify-between p-6 md:p-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2 tracking-tight text-cyan-100 drop-shadow-md">
+                    {project.title}
+                  </h3>
+                  <p className="text-cyan-200/90 mb-4 text-base leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-[#0d171b]/70 ring-1 ring-cyan-400/30 text-cyan-200 group-hover:ring-cyan-300/40 group-hover:text-cyan-100 transition-colors shadow-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex gap-4 mt-2">
+                  <Motion.a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-5 py-2 rounded-lg ring-1 ring-cyan-400/30 bg-[#0d171b]/70 backdrop-blur-sm text-cyan-200 text-base font-semibold hover:text-cyan-100 hover:ring-cyan-300/50 hover:bg-gradient-to-r hover:from-cyan-400/10 hover:via-blue-400/10 hover:to-teal-300/10 transition-all shadow-md"
+                    whileHover={{ y: -2 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Motion.a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative flex items-center justify-center gap-2 px-4 py-2 rounded-lg ring-1 ring-cyan-400/25 bg-[#0d171b]/60 backdrop-blur-sm text-cyan-200 text-sm font-medium hover:text-cyan-100 hover:ring-cyan-300/40 hover:bg-gradient-to-r hover:from-cyan-400/10 hover:via-blue-400/10 hover:to-teal-300/10 transition-all"
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                >
-                  <Github size={16} />
-                  Code
-                </Motion.a>
-                <Motion.a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-sm shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                >
-                  <ExternalLink size={16} />
-                  Live
-                </Motion.a>
+                    <Github size={18} />
+                    Code
+                  </Motion.a>
+                  <Motion.a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-bold text-base shadow-lg shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/50"
+                    whileHover={{ y: -2 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    <ExternalLink size={18} />
+                    Live
+                  </Motion.a>
+                </div>
               </div>
             </Motion.div>
           ))}
         </Motion.div>
+        <div className="flex justify-center mt-10">
+          <a
+            href="https://github.com/Adebayozz1994?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-base shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
+          >
+            View More
+          </a>
+        </div>
       </div>
     </section>
   )

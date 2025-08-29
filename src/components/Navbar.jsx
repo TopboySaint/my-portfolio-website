@@ -178,9 +178,6 @@ export default function Navbar() {
                 </Motion.button>
               ))}
 
-              <Motion.div className="mt-8 sm:mt-12 text-center w-full" variants={linkVariants}>
-                <p className="text-cyan-200 text-base sm:text-lg font-medium drop-shadow-sm font-[Poppins]">Let's build something amazing together <span className='text-cyan-300'>😉</span></p>
-              </Motion.div>
             </Motion.div>
 
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 -z-10 rounded-xl" />

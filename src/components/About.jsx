@@ -7,10 +7,8 @@ import {
   SiExpress,
   SiRedux,
   SiVite,
-  SiPostgresql,
   SiWebpack,
   SiPostman,
-  SiDocker,
   SiVercel,
   SiNetlify,
   SiRender,
@@ -21,16 +19,13 @@ import {
   SiReacthookform,
   SiMongoose,
   SiReact,
-  SiJest,
-  SiJira,
-  SiSlack,
   SiExpo,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { BiLogoMongodb } from "react-icons/bi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { FaBootstrap, FaNpm, FaReact, FaLock, FaCheckCircle } from "react-icons/fa";
-import { GrGraphQl, GrMysql } from "react-icons/gr";
+import { GrMysql } from "react-icons/gr";
 import { FaGitAlt, FaGithub, FaPhp } from "react-icons/fa6";
 import { DiNodejs, DiVisualstudio } from "react-icons/di";
 
@@ -72,8 +67,8 @@ export default function About() {
       { name: "MongoDB", icon: BiLogoMongodb },
       { name: "Mongoose", icon: SiMongoose },
       { name: "MySQL", icon: GrMysql },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "GraphQL", icon: GrGraphQl },
+  // { name: "PostgreSQL", icon: SiPostgresql },
+  // { name: "GraphQL", icon: GrGraphQl },
       { name: "Firebase", icon: IoLogoFirebase },
       { name: "JWT", icon: SiJsonwebtokens },
       { name: "bcrypt", icon: FaLock },
@@ -86,15 +81,15 @@ export default function About() {
       { name: "NPM", icon: FaNpm },
       { name: "Webpack", icon: SiWebpack },
       { name: "Postman", icon: SiPostman },
-      { name: "Docker", icon: SiDocker },
+  // { name: "Docker", icon: SiDocker },
       { name: "Vercel", icon: SiVercel },
       { name: "Netlify", icon: SiNetlify },
       { name: "Render", icon: SiRender },
       { name: "ESLint", icon: SiEslint },
       { name: "Prettier", icon: SiPrettier },
-      { name: "Jest", icon: SiJest },
-      { name: "Jira", icon: SiJira },
-      { name: "Slack", icon: SiSlack },
+  // { name: "Jest", icon: SiJest },
+  // { name: "Jira", icon: SiJira },
+  // { name: "Slack", icon: SiSlack },
     ],
   }
   const categories = [
