@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] py-16 px-4 sm:px-6 lg:px-8 text-cyan-100 font-[Poppins]">
-      {/* Decorative glows */}
+
       <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[540px] h-[540px] bg-cyan-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-200px] right-[-160px] w-[520px] h-[520px] bg-teal-400/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-0 w-[420px] h-[420px] -translate-y-1/2 bg-gradient-radial from-cyan-500/10 via-transparent to-transparent rounded-full blur-2xl" />
@@ -30,7 +30,7 @@ export default function Footer() {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-teal-200 drop-shadow">Adeniyi 'SAINT Develops' Bukola</span>
             </h3>
             <p className="text-cyan-200/80 text-sm sm:text-base leading-relaxed">
-              Software Engineer focused on full stack web & native app development. Crafting performant, accessible, and scalable products.
+              Software Engineer focused on full stack web & native app development. 
             </p>
           </div>
 

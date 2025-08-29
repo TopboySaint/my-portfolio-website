@@ -92,7 +92,7 @@ export default function Projects() {
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-teal-300/10 pointer-events-none" />
-              {/* IMAGE */}
+
               <div className="mb-4 overflow-hidden rounded-lg ring-1 ring-cyan-400/10">
                 <img
                   src={project.image}
@@ -149,7 +149,7 @@ export default function Projects() {
         </Motion.div>
         <div className="flex justify-center mt-10">
           <a
-            href="https://github.com/Adebayozz1994?tab=repositories"
+            href="https://github.com/TopboySaint?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-400 text-[#0b1214] font-semibold text-base shadow-md shadow-cyan-900/30 hover:from-cyan-400 hover:via-blue-400 hover:to-teal-300 transition-all ring-1 ring-cyan-400/40"
