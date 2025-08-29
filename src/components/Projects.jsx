@@ -13,14 +13,6 @@ export default function Projects() {
       image: "/images/projects/TaskMint.png",
     },
     {
-      title: "WebVault",
-      description: "A Web banking tool for managing finances with a modern UI.",
-      tech: ["React", "TaiwindCSS", "Nodejs", "MongoDB", "Expressjs" ],
-      codeUrl: "https://github.com/TopboySaint/WebVault",
-      liveUrl: "https://web-vault-alpha.vercel.app/",
-      image: "/images/projects/WebVault.png",
-    },
-    {
       title: "Weather Checker",
       description: "This is a simple, responsive weather-checking platform with HTML, Vanilla Javascript and Bootstrap.",
       tech: ["HTML", "CSS", "BootstrapCSS", "Javascript"],
@@ -28,6 +20,15 @@ export default function Projects() {
       liveUrl: "https://topboysaint.github.io/Weather-App/",
       image: "/images/projects/weather.png",
     },
+    {
+      title: "WebVault",
+      description: "A Web banking tool for managing finances with a modern UI.",
+      tech: ["React", "TaiwindCSS", "Nodejs", "MongoDB", "Expressjs" ],
+      codeUrl: "https://github.com/TopboySaint/WebVault",
+      liveUrl: "https://web-vault-alpha.vercel.app/",
+      image: "/images/projects/WebVault.png",
+    },
+    
   ]
 
   const containerVariants = {
